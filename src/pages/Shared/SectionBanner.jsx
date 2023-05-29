@@ -1,17 +1,17 @@
-import img from '../../assets/home/featured.jpg'
-import { Parallax, Background } from 'react-parallax';
 
-const SectionBanner = () => {
+import { Parallax} from 'react-parallax';
+
+const SectionBanner = ({heading, subHeading, img}) => {
     return (
-        <Parallax className='hero xl:h-[700px] mt-20 bg-fixed' bgImage={img} strength={200}>
-                <Background  className="bg-black bg-opacity-50">
-                <div className="text-center text-neutral-content">
+        <Parallax className='hero min-h-screen mt-20' bgImage={img} strength={200}>
+                <div className="w-3/4 mx-auto text-center text-white">
+                <div className="bg-black bg-opacity-50 p-10">
                     <div className="px-32 py-12">
-                        <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-                        <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                        <h1 className="mb-5 text-5xl font-bold">{heading}</h1>
+                        <p className="mb-5">{subHeading}</p>
                     </div>
                 </div>
-                </Background>
+                </div>
         </Parallax>
     );
 };
